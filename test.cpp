@@ -17,7 +17,6 @@ const std::string output(const std::string str)
 
 class SomeObject
 {
-private:
     int value;
 
 public:
@@ -45,5 +44,4 @@ BOOST_PYTHON_MODULE(hello)
     python::class_<SomeObject>("SomeObject", python::init<const int>())
         .def("get_value", &SomeObject::get_value)
         .def("set_value", &SomeObject::set_value);
-
 }
